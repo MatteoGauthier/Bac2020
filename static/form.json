@@ -1,0 +1,94 @@
+[
+  {
+    "question": "Quel bac preparez-vous ?",
+    "subtitle": "Et oui on a besoin de savoir ça",
+    "type": "radio",
+    "id": "voieQuestion",
+    "cards": [
+      {
+        "name": "Général",
+        "value": "general",
+        "bg": "blue"
+      },
+      {
+        "name": "Techno",
+        "value": "techno",
+        "bg": "cyan"
+      },
+      {
+        "name": "Pro",
+        "value": "pro",
+        "bg": "brown"
+      }
+    ]
+  },
+  {
+    "question": "Quelle fillière ?",
+    "subtitle": "Et oui on a besoin de savoir ça",
+    "type": "radio",
+    "id": "filliereQuestion",
+    "cards": [
+      {
+        "name": "Scientifique",
+        "bg": "blue",
+        "value": "scientifique"
+      },
+      {
+        "name": "Littéraire",
+        "bg": "cyan",
+        "value": "litteraire"
+      },
+      {
+        "name": "Economie et sociale",
+        "bg": "brown",
+        "value": "es"
+      }
+    ]
+  },
+  {
+    "question": "Quelle spécialité ?",
+    "subtitle": "Les plus malins on choisit la spé SI",
+    "type": "radio",
+    "id": "speQuestion",
+    "cards": [
+      {
+        "name": "Science de l'ingénieur",
+        "bg": "blue",
+        "value": "si"
+      },
+      {
+        "name": "Physique Chimie",
+        "bg": "cyan",
+        "value": "phyc"
+      },
+      {
+        "name": "ISN",
+        "bg": "brown",
+        "value": "isn"
+      }
+    ]
+  },
+  {
+    "question": "Quelle options ?",
+    "subtitle": "Lorem Ipsum",
+    "type": "checkbox",
+    "id": "optionsQuestion",
+    "cards": [
+      {
+        "name": "Option Sport",
+        "bg": "blue",
+        "value": "optionSport"
+      },
+      {
+        "name": "Classe Euro",
+        "bg": "cyan",
+        "value": "classeEuro"
+      },
+      {
+        "name": "Optionnns",
+        "bg": "brown",
+        "value": "otherOption"
+      }
+    ]
+  }
+]
