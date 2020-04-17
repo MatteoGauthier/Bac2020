@@ -1,29 +1,22 @@
 <template>
-  <div class="v-input-radio">
-    <input :id="_uid" v-model="internalValue" type="radio" :value="radioOption" />
-    <label :for="_uid">{{ text }}</label>
-  </div>
+    <div @click="updateActiveValue" class="p-5 border rounded-lg shadow" :class="[(this.activeValue == this.valueName) ? 'border-blue-600' : 'border-gray-300' ]" @keydown.space="updateActiveValue">
+      {{this.valueName}}
+    </div>
 </template>
 
 <script>
+// v-if="this.activeValue === this.valueName"
 export default {
-  props: {
-    value: String,
-    radioOption: String,
-    text: String
+  model: {
+    prop: 'activeValue',
+    event: 'onUpdateValue'
   },
-
-  computed: {
-    internalValue: {
-      get() {
-        return this.value;
-      },
-      set(v) {
-        this.$emit("input", v);
-      }
+  props: ['valueName', 'activeValue'],
+  methods: {
+    updateActiveValue() {
+      console.log("radioUpdate")
+      this.$emit('onUpdateValue', this.valueName)
     }
   }
-};
+}
 </script>
-
-<style lang="scss" scoped></style>

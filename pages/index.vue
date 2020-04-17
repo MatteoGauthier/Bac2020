@@ -1,19 +1,16 @@
 <template>
   <div class="container mx-auto">
-    <TheForm/>
-
+    <Form />
   </div>
 </template>
 
 <script>
-import TheForm from "@/components/TheForm"
+import Form from "@/components/Form";
 export default {
-components:{
-  TheForm
-}
-}
+  components: {
+    Form
+  }
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

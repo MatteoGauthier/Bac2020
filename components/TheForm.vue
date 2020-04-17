@@ -26,7 +26,7 @@ export default {
     Cards
   },
   data() {
-    return {
+    return {checked:null,
       formData: null
     }
   },

@@ -1,9 +1,32 @@
 [
   {
+    "question": "Quelle options ?",
+    "subtitle": "Lorem Ipsum",
+    "type": "checkbox",
+    "id": "UserOptions",
+    "cards": [
+      {
+        "name": "Option Sport",
+        "bg": "blue",
+        "value": "optionSport"
+      },
+      {
+        "name": "Classe Euro",
+        "bg": "cyan",
+        "value": "classeEuro"
+      },
+      {
+        "name": "Optionnns",
+        "bg": "brown",
+        "value": "otherOption"
+      }
+    ]
+  },
+  {
     "question": "Quel bac preparez-vous ?",
     "subtitle": "Et oui on a besoin de savoir ça",
     "type": "radio",
-    "id": "voieQuestion",
+    "id": "UserVoie",
     "cards": [
       {
         "name": "Général",
@@ -26,7 +49,7 @@
     "question": "Quelle fillière ?",
     "subtitle": "Et oui on a besoin de savoir ça",
     "type": "radio",
-    "id": "filliereQuestion",
+    "id": "UserFilliere",
     "cards": [
       {
         "name": "Scientifique",
@@ -49,7 +72,7 @@
     "question": "Quelle spécialité ?",
     "subtitle": "Les plus malins on choisit la spé SI",
     "type": "radio",
-    "id": "speQuestion",
+    "id": "UserSpe",
     "cards": [
       {
         "name": "Science de l'ingénieur",
@@ -67,28 +90,6 @@
         "value": "isn"
       }
     ]
-  },
-  {
-    "question": "Quelle options ?",
-    "subtitle": "Lorem Ipsum",
-    "type": "checkbox",
-    "id": "optionsQuestion",
-    "cards": [
-      {
-        "name": "Option Sport",
-        "bg": "blue",
-        "value": "optionSport"
-      },
-      {
-        "name": "Classe Euro",
-        "bg": "cyan",
-        "value": "classeEuro"
-      },
-      {
-        "name": "Optionnns",
-        "bg": "brown",
-        "value": "otherOption"
-      }
-    ]
   }
+
 ]

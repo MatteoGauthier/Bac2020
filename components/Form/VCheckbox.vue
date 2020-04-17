@@ -1,28 +1,45 @@
 <template>
-  <div class="v-input-checkbox">
-    <input :id="_uid" v-model="internalValue" type="checkbox" />
-    <label :for="_uid">{{ text }}</label>
+  <div @click="onChange()" class="p-5 border rounded-lg shadow" :class="[(value.includes(inputValue)) ? 'border-blue-600' : 'border-gray-300' ]">
+    <input :ref="'checkbox-' + question.id+ '-' + index" :id="index" type="checkbox" class="hidden" :value="inputValue" @change="onChange" />
+    {{label}}
   </div>
 </template>
-
 <script>
 export default {
-  props: {
-    text: String,
-    value: Boolean
-  },
-
-  computed: {
-    internalValue: {
-      get() {
-        return this.value;
-      },
-      set(v) {
-        this.$emit("input", v);
+  methods: {
+    onChange(e) {
+      if (!e) {
+        e = this.$refs['checkbox-' + this.question.id+ '-' + this.index]
+        e.checked = !e.checked
+      } else {
+        e = e.target
       }
+      let currentValue = [...this.value];
+      if (e.checked) {
+        currentValue.push(e.value);
+      } else {
+        currentValue = currentValue.filter(item => item !== e.value);
+      }
+      this.$emit("input", currentValue);
+    }
+  },
+  props: {
+    question: {
+      type: Object
+    },
+    label: {
+      type: String,
+      required: true
+    },
+    index: {
+      type: Number
+    },
+    inputValue: {
+      type: String
+    },
+    value: {
+      type: Array
     }
   }
 };
 </script>
-
-<style lang="scss" scoped></style>

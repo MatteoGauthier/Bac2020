@@ -1,11 +1,13 @@
-
 export default {
   mode: "spa",
   /*
    ** Headers of the page
    */
   env: {
-    baseURL: (process.env.NODE_ENV === 'production' ? 'http//your-url' : 'http://localhost:3000')
+    baseURL:
+      process.env.NODE_ENV === "production"
+        ? "http//your-url"
+        : "http://localhost:3000"
   },
   head: {
     title: process.env.npm_package_name || "",
@@ -38,7 +40,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{ src: "~/plugins/fragment" }],
   /*
    ** Nuxt.js dev-modules
    */
