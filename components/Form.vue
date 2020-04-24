@@ -1,21 +1,28 @@
 <template>
-  <div>
-    <div
-      class="py-8 mx-auto md:flex md:flex-row md:flex-wrap"
-      v-for="question in formData"
-      :key="question.id"
-    >
-      <FormWrapper v-model="activeValue" :question="question"/>
+  <div class="flex flex-col">
+    <div class="mt-40 border" v-for="(question, index) in formData" :key="question.id">
+      <div class="mb-12 text-center">
+        <Question>{{ question.name }}</Question>
+        <Subtitle>{{ question.subtitle }}</Subtitle>
+      </div>
+      <div class="flex">
+
+      <FormWrapper v-model="activeValue" :question="question" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import Question from "./Form/Question";
+import Subtitle from "./Form/Subtitle";
 import FormWrapper from "./Form/FormWrapper";
 import axios from "axios"
 export default {
   name: "Form",
   components: {
+        Question,
+    Subtitle,
     FormWrapper
   },
 

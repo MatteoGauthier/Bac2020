@@ -1,6 +1,6 @@
 [
   {
-    "question": "Quelle options ?",
+    "name": "Quelle options ?",
     "subtitle": "Lorem Ipsum",
     "type": "checkbox",
     "id": "UserOptions",
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "question": "Quel bac preparez-vous ?",
+    "name": "Quel bac preparez-vous ?",
     "subtitle": "Et oui on a besoin de savoir ça",
     "type": "radio",
     "id": "UserVoie",
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "question": "Quelle fillière ?",
+    "name": "Quelle fillière ?",
     "subtitle": "Et oui on a besoin de savoir ça",
     "type": "radio",
     "id": "UserFilliere",
@@ -69,7 +69,7 @@
     ]
   },
   {
-    "question": "Quelle spécialité ?",
+    "name": "Quelle spécialité ?",
     "subtitle": "Les plus malins on choisit la spé SI",
     "type": "radio",
     "id": "UserSpe",
