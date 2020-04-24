@@ -7,17 +7,17 @@
     "cards": [
       {
         "name": "Option Sport",
-        "bg": "blue",
+        "background": "#D4EDFF",
         "value": "optionSport"
       },
       {
         "name": "Classe Euro",
-        "bg": "cyan",
+        "background": "#F0FFF4",
         "value": "classeEuro"
       },
       {
         "name": "Optionnns",
-        "bg": "brown",
+        "background": "#FFFAF0",
         "value": "otherOption"
       }
     ]
@@ -31,17 +31,17 @@
       {
         "name": "Général",
         "value": "general",
-        "bg": "blue"
+        "background": "#D4EDFF"
       },
       {
         "name": "Techno",
         "value": "techno",
-        "bg": "cyan"
+        "background": "#F0FFF4"
       },
       {
         "name": "Pro",
         "value": "pro",
-        "bg": "brown"
+        "background": "#FFFAF0"
       }
     ]
   },
@@ -53,17 +53,17 @@
     "cards": [
       {
         "name": "Scientifique",
-        "bg": "blue",
+        "background": "#D4EDFF",
         "value": "scientifique"
       },
       {
         "name": "Littéraire",
-        "bg": "cyan",
+        "background": "#F0FFF4",
         "value": "litteraire"
       },
       {
         "name": "Economie et sociale",
-        "bg": "brown",
+        "background": "#FFFAF0",
         "value": "es"
       }
     ]
@@ -76,20 +76,19 @@
     "cards": [
       {
         "name": "Science de l'ingénieur",
-        "bg": "blue",
+        "background": "#D4EDFF",
         "value": "si"
       },
       {
         "name": "Physique Chimie",
-        "bg": "cyan",
+        "background": "#F0FFF4",
         "value": "phyc"
       },
       {
         "name": "ISN",
-        "bg": "brown",
+        "background": "#FFFAF0",
         "value": "isn"
       }
     ]
   }
-
 ]

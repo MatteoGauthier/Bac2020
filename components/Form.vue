@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col">
-    <div class="mt-40 border" v-for="(question, index) in formData" :key="question.id">
+    <div class="mt-40" v-for="(question, index) in formData" :key="question.id">
       <div class="mb-12 text-center">
         <Question>{{ question.name }}</Question>
         <Subtitle>{{ question.subtitle }}</Subtitle>
       </div>
-      <div class="flex">
+      <div class="flex justify-center">
 
       <FormWrapper v-model="activeValue" :question="question" />
       </div>

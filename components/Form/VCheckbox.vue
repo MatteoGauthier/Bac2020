@@ -1,7 +1,9 @@
 <template>
-  <div @click="onChange()" class="p-5 border rounded-lg shadow" :class="[(value.includes(inputValue)) ? 'border-blue-600' : 'border-gray-300' ]">
+  <div @click="onChange()" class="bac-card" :style="setBackground(background)" :class="[(value.includes(inputValue)) ? 'border-blue-500' : 'border-gray-300' ]">
     <input :ref="'checkbox-' + question.id+ '-' + index" :id="index" type="checkbox" class="hidden" :value="inputValue" @change="onChange" />
+    <span >
     {{label}}
+    </span>
   </div>
 </template>
 <script>
@@ -21,6 +23,12 @@ export default {
         currentValue = currentValue.filter(item => item !== e.value);
       }
       this.$emit("input", currentValue);
+    },
+    setBackground(bg) {
+      if (bg.type === 'image') {
+        return {background : url(bg.image)}
+      }
+      return {background: bg.color}
     }
   },
   props: {
@@ -39,6 +47,9 @@ export default {
     },
     value: {
       type: Array
+    },
+    background: {
+      type: Object,
     }
   }
 };
