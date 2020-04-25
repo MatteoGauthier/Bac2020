@@ -35,6 +35,14 @@ module.exports = {
         "Times New Roman",
         "Times",
         "serif"
+      ],
+      mono: [
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        '"Liberation Mono"',
+        '"Courier New"',
+        "monospace"
       ]
     },
     extend: {
