@@ -1,28 +1,5 @@
 [
   {
-    "name": "Quelle options ?",
-    "subtitle": "Lorem Ipsum",
-    "type": "checkbox",
-    "id": "UserOptions",
-    "cards": [
-      {
-        "name": "Option Sport",
-        "background": "#D4EDFF",
-        "value": "optionSport"
-      },
-      {
-        "name": "Classe Euro",
-        "background": "#F0FFF4",
-        "value": "classeEuro"
-      },
-      {
-        "name": "Optionnns",
-        "background": "#FFFAF0",
-        "value": "otherOption"
-      }
-    ]
-  },
-  {
     "name": "Quel bac preparez-vous ?",
     "subtitle": "Et oui on a besoin de savoir ça",
     "type": "radio",
@@ -68,6 +45,7 @@
       }
     ]
   },
+
   {
     "name": "Quelle spécialité ?",
     "subtitle": "Les plus malins on choisit la spé SI",
@@ -88,6 +66,29 @@
         "name": "ISN",
         "background": "#FFFAF0",
         "value": "isn"
+      }
+    ]
+  },
+  {
+    "name": "Quelle options ?",
+    "subtitle": "Lorem Ipsum",
+    "type": "checkbox",
+    "id": "UserOptions",
+    "cards": [
+      {
+        "name": "Option Sport",
+        "background": "#D4EDFF",
+        "value": "optionSport"
+      },
+      {
+        "name": "Classe Euro",
+        "background": "#F0FFF4",
+        "value": "classeEuro"
+      },
+      {
+        "name": "Optionnns",
+        "background": "#FFFAF0",
+        "value": "otherOption"
       }
     ]
   }

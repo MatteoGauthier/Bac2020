@@ -20,6 +20,7 @@
     "vue-fragment": "^1.5.1"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^1.0.0"
+    "@nuxtjs/tailwindcss": "^1.0.0",
+    "tailwindcss-textshadow": "^2.0.0"
   }
 }

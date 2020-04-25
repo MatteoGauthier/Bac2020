@@ -63,5 +63,5 @@ module.exports = {
     padding: ["first", "last", "responsive"],
     container: ["responsive"]
   },
-  plugins: []
+  plugins: [require("tailwindcss-textShadow")]
 };

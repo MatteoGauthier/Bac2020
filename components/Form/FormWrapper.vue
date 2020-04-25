@@ -38,7 +38,7 @@ export default {
   methods: {
     checkBackgroundType(bg) {
       let result = validImgExtensions.has(path.extname(bg).slice(1).toLowerCase()) ? {type: "image", image: bg} : {type: "color", color: bg}
-      console.log(result)
+      // console.log(result)
       return result
     }
   },
@@ -51,13 +51,13 @@ export default {
   watch: {
     activeValue(newValue, oldValue) {
       let stateId = "set" + this.question.id;
-      console.log("set -> stateId", stateId);
+      // console.log("set -> stateId", stateId);
       this.$store.commit(stateId, newValue);
     },
     checkboxActiveValue(newValue, oldValue) {
-      console.log(this.checkboxActiveValue);
+      // console.log(this.checkboxActiveValue);
       let stateId = "set" + this.question.id;
-      console.log("set -> stateId", stateId);
+      // console.log("set -> stateId", stateId);
       this.$store.commit(stateId, newValue);
     }
   }

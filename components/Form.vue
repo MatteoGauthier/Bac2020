@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col">
-    <div class="mt-40" v-for="(question, index) in formData" :key="question.id">
+    <div class="mt-40" v-for="(question) in formData" :key="question.id">
       <div class="mb-12 text-center">
         <Question>{{ question.name }}</Question>
         <Subtitle>{{ question.subtitle }}</Subtitle>
@@ -10,6 +10,10 @@
       <FormWrapper v-model="activeValue" :question="question" />
       </div>
     </div>
+    <pre><code>
+
+    {{JSON.stringify(userChoices, 0, 2)}}
+      </code></pre>
   </div>
 </template>
 
@@ -29,7 +33,8 @@ export default {
   data() {
     return {
       activeValue: "",
-      formData: null
+      formData: null,
+      userChoices: {}
     };
   },
 
@@ -37,13 +42,16 @@ export default {
     this.formData = await axios
       .get(process.env.baseURL + "/form.json")
       .then(res => res.data);
+    console.log(JSON.stringify(this.$store.state.responses,0, 2))
+
   },
 
   watch: {
-    activeValue: function(el) {
-      console.log(el);
-    }
+  '$store.state.responses': function() {
+    this.userChoices = this.$store.state.responses
+    console.log(JSON.stringify(this.$store.state.responses,0, 2))
   }
+}
 };
 </script>
 
