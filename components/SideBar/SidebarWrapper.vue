@@ -2,11 +2,11 @@
   <div>
     <div class="flex flex-col">
       <div>
-        <div @click="doSomething('+')" id="bac-logo">Plus</div>
-        <div @click="doSomething('-')" id="bac-subtitle">Minus</div>
+        <button @click="doSomething('+')" id="bac-logo">Plus</button>
+        <button @click="doSomething('-')" id="bac-subtitle">Minus</button>
       </div>
       <div>
-        <ProgressBar :steps="3" :step="step"></ProgressBar>
+        <ProgressBar :steps="stepsText" :status="this.$store.state.responses" :currentStep="step"></ProgressBar>
       </div>
     </div>
   </div>
@@ -24,10 +24,16 @@ export default {
       step: 1
     };
   },
+  computed: {
+    stepsText() {
+      return this.$store.state.formData.map(element =>
+        Object.assign({}, ...['name','type', 'id'].map(key => ({ [key]: element[key] })))
+      );
+    }
+  },
   methods: {
     doSomething(e) {
-
-      e == '+' ? this.step++ : this.step--
+      e == "+" ? this.step++ : this.step--;
     }
   }
 };

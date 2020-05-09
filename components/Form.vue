@@ -6,8 +6,7 @@
         <Subtitle>{{ question.subtitle }}</Subtitle>
       </div>
       <div class="flex justify-center">
-
-      <FormWrapper v-model="activeValue" :question="question" />
+        <FormWrapper v-model="activeValue" :question="question" />
       </div>
     </div>
     <pre><code>
@@ -33,17 +32,13 @@ export default {
   data() {
     return {
       activeValue: "",
-      formData: null,
       userChoices: {}
     };
   },
-
-  async mounted() {
-    this.formData = await axios
-      .get(process.env.baseURL + "/form.json")
-      .then(res => res.data);
-    console.log(JSON.stringify(this.$store.state.responses,0, 2))
-
+  computed: {
+    formData() {
+      return this.$store.state.formData
+    }
   },
 
   watch: {

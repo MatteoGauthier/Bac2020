@@ -1,6 +1,7 @@
 export const strict = process.env.NODE_ENV !== "production";
 
 export const state = () => ({
+  formData: {},
   responses: {
     name: "",
     voie: "",
@@ -19,21 +20,31 @@ export const getters = {
 };
 
 export const mutations = {
+  setFormData(state, data) {
+    state.formData = data;
+  },
 
-    setUserName(state, name) {
-      state.responses = { ...state.responses, name };
-    },
-    setUserVoie(state, voie) {
-      state.responses = { ...state.responses, voie };
-    },
-    setUserFilliere(state, filliere) {
-      state.responses = { ...state.responses, filliere };
-    },
-    setUserSpe(state, spe) {
-      state.responses = { ...state.responses, spe };
-    },
-    setUserOptions(state, options) {
-      state.responses = { ...state.responses, options };
-    }
+  setUserName(state, name) {
+    state.responses = { ...state.responses, name };
+  },
+  setUserVoie(state, voie) {
+    state.responses = { ...state.responses, voie };
+  },
+  setUserFilliere(state, filliere) {
+    state.responses = { ...state.responses, filliere };
+  },
+  setUserSpe(state, spe) {
+    state.responses = { ...state.responses, spe };
+  },
+  setUserOptions(state, options) {
+    state.responses = { ...state.responses, options };
+  }
+};
 
+export const actions = {
+  async nuxtServerInit({ commit }) {
+    let file = await require("~/assets/form.json");
+
+    await commit("setFormData", file);
+  }
 };
