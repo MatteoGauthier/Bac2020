@@ -19,3 +19,17 @@
   @apply text-4xl;
   text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06)
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #d6d6d6;
+    /* border-radius: 5px; */
+}
+
+:root, .scrollbar{
+  scrollbar-width: thin !important;
+  scrollbar-color:#d6d6d6 transparent  !important;
+}

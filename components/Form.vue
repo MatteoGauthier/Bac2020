@@ -1,18 +1,20 @@
 <template>
-  <div class="flex flex-col">
-    <div class="mt-40" v-for="(question) in formData" :key="question.id">
-      <div class="mb-12 text-center">
-        <Question>{{ question.name }}</Question>
-        <Subtitle>{{ question.subtitle }}</Subtitle>
+  <div class="w-full">
+    <div class="flex flex-col w-full mx-auto">
+      <div class="mt-40" v-for="(question) in formData" :key="question.id">
+        <div class="mb-12 text-center">
+          <Question>{{ question.name }}</Question>
+          <Subtitle>{{ question.subtitle }}</Subtitle>
+        </div>
+        <div class="flex justify-center">
+          <FormWrapper v-model="activeValue" :question="question" />
+        </div>
       </div>
-      <div class="flex justify-center">
-        <FormWrapper v-model="activeValue" :question="question" />
-      </div>
-    </div>
-    <pre><code>
+      <pre><code>
 
     {{JSON.stringify(userChoices, 0, 2)}}
       </code></pre>
+    </div>
   </div>
 </template>
 

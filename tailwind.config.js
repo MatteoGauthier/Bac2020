@@ -87,7 +87,8 @@ module.exports = {
       },
       width: {
         imgA: "140px",
-        card: "312px"
+        card: "312px",
+        "side-xl": '290px'
       },
       zIndex: {
         n1: "-10"
@@ -95,7 +96,12 @@ module.exports = {
       fontSize: {
         sl: "1.75rem",
         xxl: "2rem",
+        "36": "2.25rem",
         "4-5xl": "2.5rem"
+      },
+      colors: {
+        "dark-purple": "#3C366B",
+        "smart-gray": "#F9F9F9"
       }
     }
   },

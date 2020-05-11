@@ -8,7 +8,8 @@ export const state = () => ({
     filliere: "",
     spe: "",
     options: []
-  }
+  },
+  currentStep: 0
 });
 
 export const getters = {
@@ -16,7 +17,8 @@ export const getters = {
   getUserFilliere: state => state.responses.filliere,
   getUserSpe: state => state.responses.spe,
   getUserOptions: state => state.responses.options,
-  getUserName: state => state.responses.name
+  getUserName: state => state.responses.name,
+  getCurrentStep: state => state.currentStep
 };
 
 export const mutations = {
@@ -26,18 +28,23 @@ export const mutations = {
 
   setUserName(state, name) {
     state.responses = { ...state.responses, name };
+    // state.currentStep =
   },
   setUserVoie(state, voie) {
     state.responses = { ...state.responses, voie };
+    state.currentStep += 1
   },
   setUserFilliere(state, filliere) {
     state.responses = { ...state.responses, filliere };
+    state.currentStep += 1;
   },
   setUserSpe(state, spe) {
     state.responses = { ...state.responses, spe };
+    state.currentStep += 1;
   },
   setUserOptions(state, options) {
     state.responses = { ...state.responses, options };
+    state.currentStep += 1;
   }
 };
 

@@ -1,7 +1,7 @@
 <template>
   <fragment v-if="question.type === 'radio'">
     <VRadio
-      class="mx-4"
+      class="mx-4 cursor-pointer select-none"
       v-for="(option) in question.cards"
       :key="option.name"
       :value-name="option.name"
@@ -11,7 +11,7 @@
   </fragment>
   <fragment v-else-if="question.type === 'checkbox'">
     <VCheckbox
-      class="mx-4"
+      class="mx-4 cursor-pointer select-none"
       v-for="(option, index) in question.cards"
       v-model="checkboxActiveValue"
       :question="question"
