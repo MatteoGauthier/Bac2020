@@ -10,10 +10,10 @@
           <FormWrapper v-model="activeValue" :question="question" />
         </div>
       </div>
-      <pre><code>
+      <!-- <pre><code>
 
     {{JSON.stringify(userChoices, 0, 2)}}
-      </code></pre>
+      </code></pre> -->
     </div>
   </div>
 </template>
@@ -46,6 +46,7 @@ export default {
   watch: {
   '$store.state.responses': function() {
     this.userChoices = this.$store.state.responses
+    // console.log(this.$store.getters.getUserVoie)
     console.log(JSON.stringify(this.$store.state.responses,0, 2))
   }
 }

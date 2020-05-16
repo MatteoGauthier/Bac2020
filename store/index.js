@@ -9,7 +9,7 @@ export const state = () => ({
     spe: "",
     options: []
   },
-  currentStep: 0
+  currentStep: 1
 });
 
 export const getters = {
@@ -31,20 +31,28 @@ export const mutations = {
     // state.currentStep =
   },
   setUserVoie(state, voie) {
+    const step = 1;
     state.responses = { ...state.responses, voie };
-    state.currentStep += 1
+    state.currentStep = state.currentStep =
+      state.responses.voie.length > 0 ? step : step-1;
   },
   setUserFilliere(state, filliere) {
+    const step = 2
     state.responses = { ...state.responses, filliere };
-    state.currentStep += 1;
+    state.currentStep = state.currentStep =
+      state.responses.filliere.length > 0 ? step : step - 1;
   },
   setUserSpe(state, spe) {
+    const step = 3;
     state.responses = { ...state.responses, spe };
-    state.currentStep += 1;
+    state.currentStep = state.currentStep =
+      state.responses.spe.length > 0 ? step : step - 1;
   },
   setUserOptions(state, options) {
+    const step = 4;
     state.responses = { ...state.responses, options };
-    state.currentStep += 1;
+    state.currentStep = state.currentStep =
+      state.responses.options.length > 0 ? step : step - 1;
   }
 };
 
