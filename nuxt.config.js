@@ -40,7 +40,13 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: "~/plugins/fragment" }],
+  plugins: [
+    { src: "~/plugins/fragment" , mode: 'client'},
+    {
+      src: "~/plugins/swiper"
+    },
+    { src: "~/plugins/table", mode: "client" }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -65,7 +71,7 @@ export default {
    ** Build configuration
    */
   build: {
-
+    vendor: ["vue-tables-2"],
     /*
      ** You can extend webpack config here
      */

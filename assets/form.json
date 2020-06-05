@@ -13,12 +13,14 @@
       {
         "name": "Techno",
         "value": "techno",
-        "background": "#F0FFF4"
+        "background": "#F0FFF4",
+        "disabled": true
       },
       {
         "name": "Pro",
         "value": "pro",
-        "background": "#FFFAF0"
+        "background": "#FFFAF0",
+        "disabled": true
       }
     ]
   },
@@ -50,22 +52,148 @@
     "name": "Quelle spécialité ?",
     "subtitle": "Les plus malins on choisit la spé SI",
     "type": "radio",
-    "id": "UserSpe",
+    "id": "Specialite",
+    "only": "scientifique",
+    "cards": [
+      {
+        "wFilliere": "scientifique",
+        "name": "Science et vie de la terre",
+        "background": "#D4EDFF",
+        "value": "svt"
+      },
+      {
+        "wFilliere": "scientifique",
+        "name": "Science de l'ingénieur",
+        "background": "#F0FFF4",
+        "value": "si"
+      },
+      {
+        "wFilliere": "scientifique",
+        "name": "Ecologie, Agronomie et Territoires",
+        "background": "#FFFAF0",
+        "value": "ecolo"
+      }
+    ]
+  },
+  {
+    "name": "Quelle enseignement de spécialité ?",
+    "subtitle": "Les plus malins on choisit la spé SI",
+    "type": "radio",
+    "id": "ESpecialite",
     "cards": [
       {
         "name": "Science de l'ingénieur",
         "background": "#D4EDFF",
-        "value": "si"
+        "value": "si",
+        "wFilliere": "scientifique"
       },
       {
         "name": "Physique Chimie",
         "background": "#F0FFF4",
-        "value": "phyc"
+        "value": "phyc",
+        "wFilliere": "scientifique"
       },
       {
         "name": "ISN",
         "background": "#FFFAF0",
-        "value": "isn"
+        "value": "isn",
+        "wFilliere": "scientifique"
+      },
+      {
+        "name": "Économie approfondie",
+        "background": "#FFFAF0",
+        "value": "eco",
+        "wFilliere": "es"
+      },
+      {
+        "name": "Sciences sociales et politiques",
+        "background": "#FFFAF0",
+        "value": "ssp",
+        "wFilliere": "es"
+      },
+      {
+        "name": "Mathématiques",
+        "background": "#FFFAF0",
+        "value": "maths",
+        "wFilliere": "all"
+      },
+      {
+        "name": "LV3",
+        "background": "#FFFAF0",
+        "value": "lv3",
+        "wFilliere": "litteraire"
+      },
+      {
+        "name": "Latin",
+        "background": "#FFFAF0",
+        "value": "latin",
+        "wFilliere": "litteraire"
+      },
+      {
+        "name": "Grecque",
+        "background": "#FFFAF0",
+        "value": "grecque",
+        "wFilliere": "litteraire"
+      },
+      {
+        "name": "Musique",
+        "background": "#FFFAF0",
+        "value": "musique",
+        "wFilliere": "litteraire"
+      },
+      {
+        "name": "Droit et Grand Enjeux",
+        "background": "#FFFAF0",
+        "value": "dge",
+        "wFilliere": "litteraire"
+      },
+      {
+        "name": "Arts plastiques",
+        "background": "#FFFAF0",
+        "value": "artsp",
+        "wFilliere": "litteraire"
+      },
+      {
+        "name": "Cinema",
+        "background": "#FFFAF0",
+        "value": "cinema",
+        "wFilliere": "litteraire"
+      },
+      {
+        "name": "Histoire des arts",
+        "background": "#FFFAF0",
+        "value": "hda",
+        "wFilliere": "litteraire"
+      },
+      {
+        "name": "Thêatre",
+        "background": "#FFFAF0",
+        "value": "theatre",
+        "wFilliere": "litteraire"
+      },
+      {
+        "name": "Danse",
+        "background": "#FFFAF0",
+        "value": "danse",
+        "wFilliere": "litteraire"
+      },
+      {
+        "name": "Arts du cirque",
+        "background": "#FFFAF0",
+        "value": "artscirque",
+        "wFilliere": "litteraire"
+      },
+      {
+        "name": "LV1 Renforcé",
+        "background": "#FFFAF0",
+        "value": "lv1",
+        "wFilliere": "litteraire"
+      },
+      {
+        "name": "LV2 Renforcé",
+        "background": "#FFFAF0",
+        "value": "lv2",
+        "wFilliere": "litteraire"
       }
     ]
   },
@@ -86,7 +214,22 @@
         "value": "classeEuro"
       },
       {
-        "name": "Optionnns",
+        "name": "LV3",
+        "background": "#FFFAF0",
+        "value": "lv3"
+      },
+      {
+        "name": "Latin",
+        "background": "#FFFAF0",
+        "value": "latin"
+      },
+      {
+        "name": "Arts",
+        "background": "#FFFAF0",
+        "value": "otherOption"
+      },
+      {
+        "name": "Langue des signes",
         "background": "#FFFAF0",
         "value": "otherOption"
       }

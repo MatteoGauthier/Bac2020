@@ -6,6 +6,11 @@
  */
 module.exports = {
   theme: {
+    filter: {
+      disabled: "grayscale(1) blur(4px)",
+
+
+    },
     height: theme => ({
       auto: "auto",
       ...theme("spacing"),
@@ -88,7 +93,7 @@ module.exports = {
       width: {
         imgA: "140px",
         card: "312px",
-        "side-xl": '290px'
+        "side-xl": "290px"
       },
       zIndex: {
         n1: "-10"
@@ -102,6 +107,12 @@ module.exports = {
       colors: {
         "dark-purple": "#3C366B",
         "smart-gray": "#F9F9F9"
+      },
+      inset: {
+        "1/2": "50%"
+      },
+      margin: {
+        "1/2": "50%"
       }
     }
   },
@@ -109,5 +120,5 @@ module.exports = {
     padding: ["first", "last", "responsive"],
     container: ["responsive"]
   },
-  plugins: []
+  plugins: [require("tailwindcss-filters")]
 };

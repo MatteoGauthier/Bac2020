@@ -6,9 +6,7 @@
           <Question>{{ question.name }}</Question>
           <Subtitle>{{ question.subtitle }}</Subtitle>
         </div>
-        <div class="flex justify-center">
           <FormWrapper v-model="activeValue" :question="question" />
-        </div>
       </div>
       <!-- <pre><code>
 

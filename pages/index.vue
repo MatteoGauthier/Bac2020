@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <SidebarWrapper class="sticky top-0 h-full w-side-xl" />
-    <div class="w-full">
+    <div class="flex-1 min-w-0">
       <Form class="w-full overflow-y-scroll scrollbar" />
       <NotesInputs/>
     </div>

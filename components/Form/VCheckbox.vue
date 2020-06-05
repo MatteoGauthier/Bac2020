@@ -1,9 +1,7 @@
 <template>
   <div @click="onChange()" class="bac-card" :style="setBackground(background)" :class="[(value.includes(inputValue)) ? 'border-blue-500' : 'border-gray-300' ]">
     <input :ref="'checkbox-' + question.id+ '-' + index" :id="index" type="checkbox" class="hidden" :value="inputValue" @change="onChange" />
-    <span >
-    {{label}}
-    </span>
+    <span>{{label}}</span>
   </div>
 </template>
 <script>

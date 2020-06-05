@@ -17,10 +17,15 @@
     "node-sass": "^4.14.1",
     "nuxt": "^2.0.0",
     "sass-loader": "^8.0.2",
-    "vue-fragment": "^1.5.1"
+    "swiper": "^5.4.2",
+    "tailwindcss-filters": "^3.0.0",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-fragment": "^1.5.1",
+    "vue-table-dynamic": "^0.2.2"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0",
-    "tailwindcss-textshadow": "^2.0.0"
+    "tailwindcss-textshadow": "^2.0.0",
+    "vue-tables-2": "^2.0.29"
   }
 }

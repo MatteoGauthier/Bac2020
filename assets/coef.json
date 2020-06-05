@@ -1,0 +1,76 @@
+{
+  "scientifique": {
+    "maths": 7,
+    "hg": 3,
+    "philo": 3,
+    "phyc": 6,
+    "lv1": 3,
+    "lv2": 2,
+    "eps": 2,
+    "eprvAnticipe": {
+      "TPE": 2,
+      "francais": 4
+    },
+    "spe": {
+      "svt": 6,
+      "si": 6,
+      "ecolo": 7
+    },
+    "eSpe": {
+      "maths": 2,
+      "isn": 2,
+      "renfoSpeA": 2
+    }
+  },
+  "es": {
+    "maths": 5,
+    "hg": 5,
+    "philo": 4,
+    "lv1": 3,
+    "lv2": 2,
+    "ses": 7,
+    "eps": 2,
+    "eprvAnticipe": {
+      "TPE": 2,
+      "francais": 4,
+      "sciences": 2
+    },
+    "eSpe": {
+      "eco": 2,
+      "ssp": 2,
+      "maths": 2,
+      "ses": 2
+    }
+  },
+  "litteraire": {
+    "maths": 4,
+    "hg": 4,
+    "philo": 7,
+    "lv1": 4,
+    "lv2": 4,
+    "eps": 2,
+    "litterature": 1,
+    "litterature_etrangere": 4,
+    "eprvAnticipe": {
+      "TPE": 2,
+      "francais": 5,
+      "sciences": 2
+    },
+    "eSpe": {
+      "maths": 4,
+      "lv3": 4,
+      "latin": 4,
+      "grecque": 4,
+      "musique": 6,
+      "dge": 4,
+      "artsp": 6,
+      "cinema": 6,
+      "hda": 6,
+      "theatre": 6,
+      "danse": 6,
+      "artscirque": 6,
+      "lv1": 4,
+      "lv2": 4
+    }
+  }
+}
