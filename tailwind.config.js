@@ -8,8 +8,7 @@ module.exports = {
   theme: {
     filter: {
       disabled: "grayscale(1) blur(4px)",
-
-
+      blurred: "blur(2px)"
     },
     height: theme => ({
       auto: "auto",
@@ -113,6 +112,13 @@ module.exports = {
       },
       margin: {
         "1/2": "50%"
+      },
+      spacing: {
+        "1-5": "0.625rem",
+        34: "8.5rem"
+      },
+      fontSize: {
+        "3-5xl": "2rem"
       }
     }
   },

@@ -3,9 +3,11 @@
     <div class="relative w-full overflow-hidden">
       <div class="absolute top-0 left-0 z-10 w-12 h-full dp-swiper-gradient-l"></div>
       <div class="absolute top-0 right-0 z-10 w-12 h-full dp-swiper-gradient-r"></div>
-      <div v-swiper:mySwiper="swiperOption">
-        <div class="flex justify-center swiper-wrapper w-1/8">
-          <fragment v-if="question.type === 'radio'">
+
+      <template v-if="question.type === 'radio'">
+        <!-- <swiper ref="mySwiper" :options="swiperOption" :instanceName="question.id"> -->
+        <div v-swiper="swiperOption" instance-name="fourthSwiper">
+          <div class="flex justify-center swiper-wrapper w-1/8">
             <VRadio
               class="mx-4 cursor-pointer select-none swiper-slide"
               v-for="option in question.cards"
@@ -15,8 +17,13 @@
               v-model="activeValue"
               :background="checkBackgroundType(option.background)"
             />
-          </fragment>
-          <fragment v-else-if="question.type === 'checkbox'">
+          </div>
+        </div>
+        <!-- </swiper> -->
+      </template>
+      <template v-else-if="question.type === 'checkbox'">
+        <div v-swiper="swiperOption" instance-name="fourthSwiper">
+          <div class="flex justify-center swiper-wrapper w-1/8">
             <VCheckbox
               class="mx-4 cursor-pointer select-none swiper-slide"
               v-for="(option, index) in question.cards"
@@ -29,10 +36,10 @@
               :label="option.name"
               :background="checkBackgroundType(option.background)"
             />
-          </fragment>
+          </div>
         </div>
-            <div class="swiper-pagination"></div>
-      </div>
+      </template>
+      <!-- <div class="swiper-pagination"></div> -->
     </div>
   </div>
 </template>
@@ -66,20 +73,29 @@ export default {
     return {
       activeValue: "",
       checkboxActiveValue: [],
-      swiperOption: {
-        loop: true,
+      swiperOption : {
+        // loop: true,
         // init:false,
         // centeredSlides: true,
-        // initialSlide:1,
-        slidesPerView: 3,
-        spaceBetween: 30,
-              pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+        // initialSlide:0,
+        // slidesPerView: 3,
+        // spaceBetween: 30,
+        freeMode: true
+        // pagination: {
+        // loop: true,
+        // slidesPerView: "auto",
+        // loopedSlides: this.question.cards.length
+        //   el: ".swiper-pagination",
+        //   clickable: true
+        // }
         // setWrapperSize: true
       }
     };
+  },
+  computed: {
+    dynamicSwiperName() {
+      return this.question.name;
+    }
   },
   watch: {
     activeValue(newValue, oldValue) {
@@ -95,16 +111,17 @@ export default {
     }
   },
   mounted() {
-    // console.log("Current Swiper instance object", this.mySwiper);
-    // this.mySwiper.slideTo(3, 1000, false);
+    console.log("Current Swiper instance object", this.mySwiper);
+    // this.swiper.slideTo(3, 1000, false);
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .dp-swiper-gradient-l {
-  background: linear-gradient(-90deg, transparent, #fff)
+  background: linear-gradient(-90deg, transparent, #fff);
 }
 .dp-swiper-gradient-r {
-  background: linear-gradient(90deg, transparent, #fff)
-}</style>
+  background: linear-gradient(90deg, transparent, #fff);
+}
+</style>
