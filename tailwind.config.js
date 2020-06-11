@@ -101,7 +101,8 @@ module.exports = {
         sl: "1.75rem",
         xxl: "2rem",
         "36": "2.25rem",
-        "4-5xl": "2.5rem"
+        "4-5xl": "2.5rem",
+        "3-5xl": "2rem"
       },
       colors: {
         "dark-purple": "#3C366B",
@@ -116,9 +117,6 @@ module.exports = {
       spacing: {
         "1-5": "0.625rem",
         34: "8.5rem"
-      },
-      fontSize: {
-        "3-5xl": "2rem"
       }
     }
   },
