@@ -56,3 +56,10 @@ td {
   scrollbar-width: thin !important;
   scrollbar-color: #d6d6d6 transparent !important;
 }
+
+.bac-step-card {
+  @apply flex flex-col px-3 py-2 bg-white border border-gray-100 rounded-md;
+  @screen md {
+    @apply px-8 py-6 rounded-large;
+  }
+}

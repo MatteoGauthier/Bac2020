@@ -92,7 +92,8 @@ module.exports = {
       width: {
         imgA: "140px",
         card: "312px",
-        "side-xl": "290px"
+        "side-xl": "290px",
+        stepCard: "541px"
       },
       zIndex: {
         n1: "-10"
@@ -117,6 +118,9 @@ module.exports = {
       spacing: {
         "1-5": "0.625rem",
         34: "8.5rem"
+      },
+      borderRadius: {
+        large: "20px"
       }
     }
   },
